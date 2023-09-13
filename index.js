@@ -66,4 +66,6 @@ whatsapp.onMessageReceived(async (msg) => {
   });
 });
 
+whatsapp.setCredentialsDir("session");
+
 console.log(`  http://localhost:${PORT}/start-session?session=mysession&scan=true`)
