@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+    <title>SSE</title>
+    </head>
+
+    <body>
+
+    <h1>About Us</h1>
+    <p>TIMER DIRETO DO SERVIDOR</p>
+    <ul></ul>
+    <script>
+
+        //faço um ajax para o criar um usário. 
+        //uso baco de dados MongoDB 
+        
+       
+
+
+    const eventList = document.querySelector('ul')
+    var source = new EventSource('http://localhost:5001/sse/1');
+
+    source.onmessage = (e) => {
+      const newElement = document.createElement('li')
+      newElement.textContent = `message: ${e.data}`
+      eventList.appendChild(newElement)
+    }
+
+    </script>
+
+    </body>
+    </html> 

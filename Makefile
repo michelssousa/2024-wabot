@@ -1,6 +1,6 @@
-up:
+start:
 	clear && npm run start
 
-dev:
+up:
 	clear && npm run dev
 
